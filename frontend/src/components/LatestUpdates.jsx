@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { getApiUrl } from '../config/api';
 import { Bell, Calendar, ArrowRight, FileText } from 'lucide-react';
 
 const categories = ['All', 'Admission', 'Academic', 'Examination', 'Events', 'Circulars'];
@@ -51,7 +52,8 @@ export default function LatestUpdates() {
   const [items, setItems] = useState(defaultAnnouncements);
 
   useEffect(() => {
-    fetch(`/api/announcements${activeTab !== 'All' ? `?category=${activeTab}` : ''}`)
+    const url = getApiUrl(`/api/announcements${activeTab !== 'All' ? `?category=${activeTab}` : ''}`);
+    fetch(url)
       .then(res => res.json())
       .then(data => {
         if (data.success && data.data) {

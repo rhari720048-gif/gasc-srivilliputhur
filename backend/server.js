@@ -1,11 +1,41 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+// Configure CORS for Vercel frontend and local development
+const allowedOrigins = [
+  'https://gasc-srivilliputhur.vercel.app',
+  'http://localhost:5173',
+  'http://localhost:3000',
+  process.env.CLIENT_URL
+].filter(Boolean);
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1 || process.env.NODE_ENV !== 'production') {
+      callback(null, true);
+    } else {
+      callback(null, true); // Public API accessible by web clients
+    }
+  },
+  credentials: true
+}));
+
 app.use(express.json());
+
+// Root Health Check Endpoint for Render Service Monitoring
+app.get('/', (req, res) => {
+  res.json({
+    status: 'online',
+    service: 'Government Arts and Science College, Srivilliputhur API',
+    institution: 'GASC Srivilliputhur',
+    frontend: 'https://gasc-srivilliputhur.vercel.app',
+    timestamp: new Date().toISOString()
+  });
+});
 
 // Institutional Metadata
 const collegeInfo = {
