@@ -4,7 +4,7 @@ import { Image, ArrowRight } from 'lucide-react';
 const galleryImages = [
   { id: 1, title: "Official College Emblem", category: "Institutional Identity", src: "/assets/college_logo.png", fit: "contain" },
   { id: 2, title: "Dr. Suba. Saravanan (Principal i/c)", category: "College Leadership", src: "/assets/principal_saravanan.jpg", fit: "cover" },
-  { id: 3, title: "Computer Science & CLP Lab", category: "Academic Facility", src: "/assets/computer_lab.png", fit: "cover" }
+  { id: 3, title: "Permanent Campus Building (Pillaiyarkulam)", category: "College Campus", src: "/assets/college_building_hd.png", fit: "cover" }
 ];
 
 export default function GalleryPreview() {
