@@ -3,8 +3,7 @@ import { Image, ArrowRight } from 'lucide-react';
 
 const galleryImages = [
   { id: 1, title: "Official College Emblem", category: "Institutional Identity", src: "/assets/college_logo.png", fit: "contain" },
-  { id: 2, title: "Dr. Suba. Saravanan (Principal i/c)", category: "College Leadership", src: "/assets/principal_saravanan.jpg", fit: "cover" },
-  { id: 3, title: "Permanent Campus Building (Pillaiyarkulam)", category: "College Campus", src: "/assets/college_building_hd.png", fit: "cover" }
+  { id: 2, title: "Dr. Suba. Saravanan (Principal i/c)", category: "College Leadership", src: "/assets/principal_saravanan.jpg", fit: "cover" }
 ];
 
 export default function GalleryPreview() {
@@ -19,7 +18,7 @@ export default function GalleryPreview() {
           </p>
         </div>
 
-        <div className="gallery-grid">
+        <div className="gallery-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
           {galleryImages.map((img) => (
             <div className="gallery-item" key={img.id} style={{ backgroundColor: '#FFF' }}>
               <img 
