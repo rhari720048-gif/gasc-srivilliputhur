@@ -8,92 +8,92 @@ import { BookOpen, GraduationCap, Users, Award, CheckCircle2, ChevronRight, User
 const departmentsData = [
   {
     id: 'tamil',
-    name: 'Department of Tamil (தமிழ்த்துறை)',
-    code: 'BA TAMIL',
-    degree: 'B.A. Tamil (இளங்கலை தமிழ்)',
+    name: 'Department of Tamil',
+    code: 'B.A. TAMIL',
+    degree: 'B.A. Tamil Literature',
     duration: '3 Academic Years (6 Semesters)',
     seats: '60 Seats',
     hod: {
-      name: 'முனைவர் க. இரவி',
-      designation: 'இணைப்பேராசிரியர் மற்றும் துறைத்தலைவர் (Associate Professor & HOD)',
+      name: 'Dr. K. Ravi',
+      designation: 'Associate Professor & Head of Department',
       qualification: 'M.A., M.A., M.Phil., Ph.D., P.G.D.J.M.C., D.F.L.'
     },
     guestLecturers: [
-      { name: 'முனைவர் பா. கிருஷ்ணமூர்த்தி', qual: 'M.A., M.Phil., B.Ed., Ph.D., NET' },
-      { name: 'முனைவர் க. அலமேலுமங்கை', qual: 'M.A., M.Phil., Ph.D., NET' },
-      { name: 'முனைவர் ப. கணேஷ்வரி', qual: 'M.A., M.Phil., Ph.D., NET' },
-      { name: 'முனைவர் பா. திருப்பதிகுமாரி (எ) காயத்ரி', qual: 'M.A., M.Phil., Ph.D., NET' }
+      { name: 'Dr. P. Krishnamoorthy', qual: 'M.A., M.Phil., B.Ed., Ph.D., NET' },
+      { name: 'Dr. K. Alamelumangai', qual: 'M.A., M.Phil., Ph.D., NET' },
+      { name: 'Dr. P. Ganeshwari', qual: 'M.A., M.Phil., Ph.D., NET' },
+      { name: 'Dr. P. Thiruppathikumari (a) Gayatri', qual: 'M.A., M.Phil., Ph.D., NET' }
     ],
     desc: 'The Department of Tamil offers rich grounding in classical Tamil literature, Sangam poetry, modern grammar, linguistics, and cultural heritage.'
   },
   {
     id: 'english',
-    name: 'Department of English (ஆங்கிலத்துறை)',
-    code: 'BA ENGLISH',
-    degree: 'B.A. English Literature (இளங்கலை ஆங்கிலம்)',
+    name: 'Department of English',
+    code: 'B.A. ENGLISH',
+    degree: 'B.A. English Literature',
     duration: '3 Academic Years (6 Semesters)',
     seats: '60 Seats',
     hod: null,
     guestLecturers: [
-      { name: 'முனைவர் ஜி.வி. அருள்மொழி அரசி', qual: 'M.A., M.Phil., Ph.D.' },
-      { name: 'முனைவர் து. சௌந்திரபாண்டி', qual: 'M.A., M.Phil., B.Ed., Ph.D.' },
-      { name: 'முனைவர் த. மாரிமுத்து', qual: 'M.A., M.Ed., Ph.D.' },
-      { name: 'முனைவர் பொ. இளையராஜா', qual: 'M.A., M.Phil., Ph.D.' }
+      { name: 'Dr. G. V. Arulmozhi Arasi', qual: 'M.A., M.Phil., Ph.D.' },
+      { name: 'Dr. T. Soundarapandi', qual: 'M.A., M.Phil., B.Ed., Ph.D.' },
+      { name: 'Dr. T. Marimuthu', qual: 'M.A., M.Ed., Ph.D.' },
+      { name: 'Dr. P. Elayaraja', qual: 'M.A., M.Phil., Ph.D.' }
     ],
     desc: 'Empowering students with English communication mastery, British literature, World classics, phonetics, and professional writing skills.'
   },
   {
     id: 'commerce',
-    name: 'Department of Commerce (வணிகவியல் துறை)',
-    code: 'BCOM',
-    degree: 'B.Com. (இளங்கலை வணிகவியல்)',
+    name: 'Department of Commerce',
+    code: 'B.COM',
+    degree: 'B.Com. (Bachelor of Commerce)',
     duration: '3 Academic Years (6 Semesters)',
     seats: '60 Seats',
     hod: {
-      name: 'முனைவர் கு. சரவணக்கைலாஸ்',
-      designation: 'உதவிப்பேராசிரியர் மற்றும் துறைத்தலைவர் (Assistant Professor & HOD)',
+      name: 'Dr. K. Saravanakailas',
+      designation: 'Assistant Professor & Head of Department',
       qualification: 'M.Com., M.Phil., Ph.D.'
     },
     guestLecturers: [
-      { name: 'முனைவர் க. வளர்மதி', qual: 'M.Com., M.Phil., Ph.D., SET' },
-      { name: 'முனைவர் பி. மாரியம்மாள்', qual: 'M.Com., M.Phil., Ph.D.' },
-      { name: 'முனைவர் ந. ஜெகன்நாதன்', qual: 'M.Com., M.Phil., M.B.A., Ph.D., P.G.D.C.A.' }
+      { name: 'Dr. K. Valarmathi', qual: 'M.Com., M.Phil., Ph.D., SET' },
+      { name: 'Dr. P. Mariyammal', qual: 'M.Com., M.Phil., Ph.D.' },
+      { name: 'Dr. N. Jeganathan', qual: 'M.Com., M.Phil., M.B.A., Ph.D., P.G.D.C.A.' }
     ],
     desc: 'Fostering expertise in financial accounting, auditing, corporate law, banking, taxation, and business management.'
   },
   {
     id: 'maths',
-    name: 'Department of Mathematics (கணிதத்துறை)',
-    code: 'BSC MATHS',
-    degree: 'B.Sc. Mathematics (இளங்கலை கணிதம்)',
+    name: 'Department of Mathematics',
+    code: 'B.SC MATHS',
+    degree: 'B.Sc. Mathematics',
     duration: '3 Academic Years (6 Semesters)',
     seats: '40 Seats',
     hod: {
-      name: 'முனைவர் சு. அமுதா',
-      designation: 'இணைப்பேராசிரியர் மற்றும் துறைத்தலைவர் (Associate Professor & HOD)',
+      name: 'Dr. S. Amutha',
+      designation: 'Associate Professor & Head of Department',
       qualification: 'M.Sc., M.Ed., M.Phil., Ph.D.'
     },
     regularFaculty: [
-      { name: 'முனைவர் க. முத்துக்குருபாக்கியம்', desig: 'இணைப்பேராசிரியர் (Associate Professor)', qual: 'M.Sc., M.Phil., Ph.D.' },
-      { name: 'முனைவர் மு. பாலகிருஷ்ணன்', desig: 'உதவிப்பேராசிரியர் (Assistant Professor)', qual: 'M.Sc., M.Phil., Ph.D., P.G.D.C.A.' }
+      { name: 'Dr. K. Muthukurupackiam', desig: 'Associate Professor', qual: 'M.Sc., M.Phil., Ph.D.' },
+      { name: 'Dr. M. Balakrishnan', desig: 'Assistant Professor', qual: 'M.Sc., M.Phil., Ph.D., P.G.D.C.A.' }
     ],
     guestLecturers: [],
     desc: 'Nurturing analytical thinking through pure and applied mathematics, algebra, calculus, operations research, and statistics.'
   },
   {
     id: 'cs',
-    name: 'Department of Computer Science (கணிணி அறிவியல் துறை)',
-    code: 'BSC CS',
+    name: 'Department of Computer Science',
+    code: 'B.SC CS',
     degree: 'B.Sc. Computer Science & CLP Lab',
     duration: '3 Academic Years (6 Semesters)',
     seats: '40 Seats',
     hod: {
-      name: 'முனைவர் சுப. சரவணன்',
-      designation: 'இணைப்பேராசிரியர் & துறைத்தலைவர் / முதல்வர் (i/c)',
+      name: 'Dr. Suba. Saravanan',
+      designation: 'Associate Professor & Head of Department / Principal (i/c)',
       qualification: 'M.C.A., M.Phil., M.Tech., Ph.D.'
     },
     regularFaculty: [
-      { name: 'முனைவர் பே. ரவி', desig: 'இணைப்பேராசிரியர் (Associate Professor)', qual: 'M.C.A., M.Phil., Ph.D.' }
+      { name: 'Dr. P. Ravi', desig: 'Associate Professor', qual: 'M.C.A., M.Phil., Ph.D.' }
     ],
     guestLecturers: [],
     desc: 'Equipping students with modern software engineering, Python programming, web development, data structures, and computer literacy lab training.'
@@ -160,7 +160,7 @@ export default function DepartmentsPage() {
                 onClick={() => setActiveTab(dept.id)}
                 className={`btn btn-sm ${activeTab === dept.id ? 'btn-secondary' : 'btn-outline-white'}`}
               >
-                {dept.name.split(' ')[2] || dept.name}
+                {dept.name.replace('Department of ', '')}
               </a>
             ))}
           </div>
@@ -212,7 +212,7 @@ export default function DepartmentsPage() {
                   {dept.hod && (
                     <div style={{ backgroundColor: 'rgba(15, 44, 89, 0.04)', padding: '1.15rem', borderRadius: 'var(--radius-md)', borderLeft: '4px solid var(--primary-navy)' }}>
                       <span style={{ fontSize: '0.725rem', fontWeight: 700, color: 'var(--accent-gold)', textTransform: 'uppercase' }}>
-                        Head of Department (துறைத்தலைவர்)
+                        Head of Department (HOD)
                       </span>
                       <h4 style={{ color: 'var(--primary-navy)', fontSize: '1.1rem', margin: '0.2rem 0' }}>
                         {dept.hod.name}
@@ -229,7 +229,7 @@ export default function DepartmentsPage() {
                   {dept.regularFaculty && dept.regularFaculty.map((fac, idx) => (
                     <div key={idx} style={{ backgroundColor: 'var(--bg-light)', padding: '1.15rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-light)' }}>
                       <span style={{ fontSize: '0.725rem', fontWeight: 700, color: 'var(--primary-navy)', textTransform: 'uppercase' }}>
-                        Faculty Member (பேராசிரியர்)
+                        Faculty Member
                       </span>
                       <h4 style={{ color: 'var(--primary-navy)', fontSize: '1.05rem', margin: '0.2rem 0' }}>
                         {fac.name}
@@ -249,7 +249,7 @@ export default function DepartmentsPage() {
               {dept.guestLecturers && dept.guestLecturers.length > 0 && (
                 <div>
                   <h4 style={{ fontSize: '0.95rem', color: 'var(--text-heading)', marginBottom: '0.65rem' }}>
-                    Guest Lecturers (கௌரவ விரிவுரையாளர்கள்)
+                    Guest Lecturers
                   </h4>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '0.75rem' }}>
                     {dept.guestLecturers.map((gl, idx) => (
