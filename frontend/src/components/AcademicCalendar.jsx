@@ -41,7 +41,12 @@ export default function AcademicCalendar() {
         </div>
 
         <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
-          <a href="/academic#calendar" className="btn btn-primary">
+          <a 
+            href="/assets/academic_calendar_2026_2027.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn btn-primary"
+          >
             <CalendarIcon size={16} /> View Full Academic Calendar (PDF) <ArrowRight size={16} />
           </a>
         </div>

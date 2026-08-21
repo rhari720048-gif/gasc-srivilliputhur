@@ -57,6 +57,7 @@ export default function AboutPage() {
           >
             <a href="#college" className="btn btn-sm btn-outline-white">About College</a>
             <a href="#principal" className="btn btn-sm btn-outline-white">Principal's Desk</a>
+            <a href="#succession" className="btn btn-sm btn-outline-white">Succession List</a>
             <a href="#administration" className="btn btn-sm btn-outline-white">Administration & Staff</a>
             <a href="#vision" className="btn btn-sm btn-outline-white">Vision & Mission</a>
           </div>
@@ -149,6 +150,63 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Succession List of Principals Section */}
+      <section id="succession" className="section-padding" style={{ backgroundColor: '#FFFFFF', borderTop: '1px solid var(--border-light)' }}>
+        <div className="container">
+          <div className="section-header">
+            <span className="section-tag">Institutional Legacy</span>
+            <h2 className="section-title heading-serif" style={{ color: 'var(--primary-navy-dark)' }}>Succession List of Principals</h2>
+            <p className="section-subtitle">Chronological record of leaders who have guided the institution since its establishment.</p>
+          </div>
+
+          <div style={{ maxWidth: '850px', margin: '2rem auto 0 auto', overflowX: 'auto', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)', border: '1px solid var(--border-light)' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.9rem', textAlign: 'left', minWidth: '600px' }}>
+              <thead>
+                <tr style={{ backgroundColor: 'var(--primary-navy-dark)', color: '#FFFFFF', borderBottom: '3px solid var(--secondary-gold)' }}>
+                  <th style={{ padding: '1rem 1.25rem', fontWeight: 700, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>S.No</th>
+                  <th style={{ padding: '1rem 1.25rem', fontWeight: 700, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Principal Name & Qualifications</th>
+                  <th style={{ padding: '1rem 1.25rem', fontWeight: 700, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Designation</th>
+                  <th style={{ padding: '1rem 1.25rem', fontWeight: 700, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.05em', textAlign: 'center' }}>From</th>
+                  <th style={{ padding: '1rem 1.25rem', fontWeight: 700, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.05em', textAlign: 'center' }}>To</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { sno: 1, name: "Dr. M. Kamaraj", qual: "M.Sc., M.Phil., Ph.D.", role: "Principal (i/c)", from: "15.09.2020", to: "15.11.2021" },
+                  { sno: 2, name: "Dr. A. Paniyadima", qual: "M.Sc., M.Phil., Ph.D., B.Ed.", role: "Principal", from: "18.11.2021", to: "31.05.2023" },
+                  { sno: 3, name: "Dr. R. Poornima Immanuel", qual: "M.A., M.Phil., Ph.D.", role: "Principal (i/c)", from: "01.06.2023", to: "30.04.2024" },
+                  { sno: 4, name: "Dr. Suba. Saravanan", qual: "M.C.A., M.Phil., M.Tech., Ph.D.", role: "Principal (i/c)", from: "01.05.2024", to: "Present" }
+                ].map((p, idx) => (
+                  <tr key={idx} style={{ borderBottom: '1px solid var(--border-light)', backgroundColor: idx % 2 === 0 ? 'var(--bg-light)' : '#FFFFFF', transition: 'background-color 0.2s' }}>
+                    <td style={{ padding: '1rem 1.25rem', fontWeight: 600, color: 'var(--primary-navy)' }}>{p.sno}</td>
+                    <td style={{ padding: '1rem 1.25rem' }}>
+                      <strong style={{ color: 'var(--primary-navy)', display: 'block', fontSize: '0.95rem' }}>{p.name}</strong>
+                      <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{p.qual}</span>
+                    </td>
+                    <td style={{ padding: '1rem 1.25rem' }}>
+                      <span style={{ 
+                        display: 'inline-block',
+                        padding: '0.25rem 0.5rem', 
+                        borderRadius: 'var(--radius-sm)', 
+                        fontSize: '0.75rem',
+                        fontWeight: 600,
+                        backgroundColor: p.role.includes('(i/c)') ? 'rgba(197, 168, 128, 0.15)' : 'var(--primary-navy)', 
+                        color: p.role.includes('(i/c)') ? 'var(--text-heading)' : '#FFFFFF',
+                        border: p.role.includes('(i/c)') ? '1px solid var(--secondary-gold)' : 'none'
+                      }}>
+                        {p.role}
+                      </span>
+                    </td>
+                    <td style={{ padding: '1rem 1.25rem', color: 'var(--text-muted)', textAlign: 'center', fontSize: '0.85rem' }}>{p.from}</td>
+                    <td style={{ padding: '1rem 1.25rem', color: p.to === 'Present' ? 'green' : 'var(--text-muted)', fontWeight: p.to === 'Present' ? 700 : 400, textAlign: 'center', fontSize: '0.85rem' }}>{p.to}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>

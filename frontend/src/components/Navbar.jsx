@@ -63,9 +63,11 @@ export default function Navbar() {
                 Academic <ChevronDown size={14} />
               </Link>
               <ul className="dropdown-menu">
-                <li><Link to="/academic#courses" className="dropdown-link"><ChevronRight size={14} /> Courses</Link></li>
+                <li><Link to="/academic#ug-programmes" className="dropdown-link"><ChevronRight size={14} /> UG Programmes</Link></li>
+                <li><Link to="/academic#admission" className="dropdown-link"><ChevronRight size={14} /> Admission</Link></li>
+                <li><Link to="/academic#curriculum" className="dropdown-link"><ChevronRight size={14} /> Curriculum</Link></li>
+                <li><Link to="/academic#teaching-and-learning" className="dropdown-link"><ChevronRight size={14} /> Teaching & Learning</Link></li>
                 <li><Link to="/academic#calendar" className="dropdown-link"><ChevronRight size={14} /> Academic Calendar</Link></li>
-                <li><Link to="/academic#examination" className="dropdown-link"><ChevronRight size={14} /> Examination</Link></li>
               </ul>
             </li>
             <li className="nav-item">
@@ -96,7 +98,13 @@ export default function Navbar() {
               <Link to="/gallery" className="nav-link">Photo Gallery</Link>
             </li>
             <li className="nav-item">
-              <Link to="/downloads" className="nav-link">Downloads</Link>
+              <Link to="/downloads" className="nav-link">
+                Downloads <ChevronDown size={14} />
+              </Link>
+              <ul className="dropdown-menu">
+                <li><Link to="/downloads#student" className="dropdown-link"><ChevronRight size={14} /> For Students</Link></li>
+                <li><Link to="/downloads#staff" className="dropdown-link"><ChevronRight size={14} /> For Staff</Link></li>
+              </ul>
             </li>
             <li className="nav-item">
               <Link to="/admission" className="nav-link">
@@ -154,9 +162,11 @@ export default function Navbar() {
             </div>
             {openSubmenu === 'academic' && (
               <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.08)', borderRadius: '6px', padding: '0.5rem 0', margin: '0.25rem 0 0.5rem 0' }}>
-                <Link to="/academic#courses" className="mobile-nav-link" style={{ paddingLeft: '1.25rem', fontSize: '0.85rem', color: 'var(--secondary-gold)' }} onClick={toggleMobile}>• Courses</Link>
+                <Link to="/academic#ug-programmes" className="mobile-nav-link" style={{ paddingLeft: '1.25rem', fontSize: '0.85rem', color: 'var(--secondary-gold)' }} onClick={toggleMobile}>• UG Programmes</Link>
+                <Link to="/academic#admission" className="mobile-nav-link" style={{ paddingLeft: '1.25rem', fontSize: '0.85rem', color: 'var(--secondary-gold)' }} onClick={toggleMobile}>• Admission</Link>
+                <Link to="/academic#curriculum" className="mobile-nav-link" style={{ paddingLeft: '1.25rem', fontSize: '0.85rem', color: 'var(--secondary-gold)' }} onClick={toggleMobile}>• Curriculum</Link>
+                <Link to="/academic#teaching-and-learning" className="mobile-nav-link" style={{ paddingLeft: '1.25rem', fontSize: '0.85rem', color: 'var(--secondary-gold)' }} onClick={toggleMobile}>• Teaching & Learning</Link>
                 <Link to="/academic#calendar" className="mobile-nav-link" style={{ paddingLeft: '1.25rem', fontSize: '0.85rem', color: 'var(--secondary-gold)' }} onClick={toggleMobile}>• Academic Calendar</Link>
-                <Link to="/academic#examination" className="mobile-nav-link" style={{ paddingLeft: '1.25rem', fontSize: '0.85rem', color: 'var(--secondary-gold)' }} onClick={toggleMobile}>• Examination</Link>
               </div>
             )}
           </li>
@@ -182,7 +192,18 @@ export default function Navbar() {
           <li><Link to="/library" className="mobile-nav-link" onClick={toggleMobile}>Library</Link></li>
           <li><Link to="/accreditation" className="mobile-nav-link" onClick={toggleMobile}>Accreditation & Ranking</Link></li>
           <li><Link to="/gallery" className="mobile-nav-link" onClick={toggleMobile}>Photo Gallery</Link></li>
-          <li><Link to="/downloads" className="mobile-nav-link" onClick={toggleMobile}>Downloads</Link></li>
+          <li>
+            <div className="mobile-nav-link" onClick={() => toggleSubmenu('downloads')} style={{ cursor: 'pointer' }}>
+              <span>Downloads</span>
+              <ChevronDown size={16} style={{ transform: openSubmenu === 'downloads' ? 'rotate(180deg)' : 'none', transition: '0.2s' }} />
+            </div>
+            {openSubmenu === 'downloads' && (
+              <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.08)', borderRadius: '6px', padding: '0.5rem 0', margin: '0.25rem 0 0.5rem 0' }}>
+                <Link to="/downloads#student" className="mobile-nav-link" style={{ paddingLeft: '1.25rem', fontSize: '0.85rem', color: 'var(--secondary-gold)' }} onClick={toggleMobile}>• For Students</Link>
+                <Link to="/downloads#staff" className="mobile-nav-link" style={{ paddingLeft: '1.25rem', fontSize: '0.85rem', color: 'var(--secondary-gold)' }} onClick={toggleMobile}>• For Staff</Link>
+              </div>
+            )}
+          </li>
           
           <li>
             <div className="mobile-nav-link" onClick={() => toggleSubmenu('admission')} style={{ cursor: 'pointer' }}>
