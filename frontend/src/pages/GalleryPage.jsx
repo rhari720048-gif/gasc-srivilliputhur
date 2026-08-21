@@ -9,66 +9,6 @@ export default function GalleryPage() {
 
   const galleryItems = [
     {
-      title: "Main College Infrastructure Facade",
-      desc: "The main academic block building and front facade of the Government Arts and Science College, Srivilliputhur campus.",
-      src: "/assets/gallery_college_front.png",
-      fit: "cover"
-    },
-    {
-      title: "Principal's Desk and Faculty Assembly",
-      desc: "Dr. Suba. Saravanan (Principal i/c) meeting with the faculty members and staff in the college administration office.",
-      src: "/assets/gallery_principal_staff.png",
-      fit: "cover"
-    },
-    {
-      title: "Student Field Trip and Outdoors Outing",
-      desc: "College students and staff members participating in an educational field trip and outdoor team building activity.",
-      src: "/assets/gallery_student_outing.png",
-      fit: "cover"
-    },
-    {
-      title: "Inauguration of Alumni Association Meet",
-      desc: "Inauguration ceremony of the Alumni Association at Government Arts and Science College, Srivilliputhur.",
-      src: "/assets/gallery_stage_event.png",
-      fit: "cover"
-    },
-    {
-      title: "National Integration Camp (NIC) delegation",
-      desc: "College student delegates representing the institution at the National Integration Camp.",
-      src: "/assets/gallery_integration_camp.png",
-      fit: "cover"
-    },
-    {
-      title: "NSS Student Volunteers Cleanliness Drive",
-      desc: "National Service Scheme (NSS) student volunteers participating in campus plantation and cleanliness drive.",
-      src: "/assets/gallery_nss_gardening.png",
-      fit: "cover"
-    },
-    {
-      title: "Academic Seminar and Guest Lecture",
-      desc: "Faculty members and external resource speakers holding a seminar session in the smart classroom.",
-      src: "/assets/gallery_classroom_seminar.png",
-      fit: "cover"
-    },
-    {
-      title: "College Cricket Sports Team",
-      desc: "The official college cricket sports team assembly with the physical education director.",
-      src: "/assets/gallery_sports_cricket.png",
-      fit: "cover"
-    },
-    {
-      title: "Career Training and Placement Seminar",
-      desc: "Guest lecture on life skills, soft skills, and career orientation hosted by the Training and Placement Cell.",
-      src: "/assets/gallery_placement_drive.png",
-      fit: "cover"
-    },
-    {
-      title: "Student Certificate Award Ceremony",
-      desc: "Student achievement awardees proudly holding their certificates of merit on the campus stairs.",
-      src: "/assets/gallery_student_certificates.png",
-      fit: "cover"
-    },
-    {
       title: "Official College Emblem",
       desc: "The official seal and emblem of the Government Arts and Science College, Srivilliputhur.",
       src: "/assets/college_logo.png",
