@@ -39,6 +39,36 @@ export default function GalleryPage() {
       fit: "cover"
     },
     {
+      title: "NSS Student Volunteers Cleanliness Drive",
+      desc: "National Service Scheme (NSS) student volunteers participating in campus plantation and cleanliness drive.",
+      src: "/assets/gallery_nss_gardening.png",
+      fit: "cover"
+    },
+    {
+      title: "Academic Seminar and Guest Lecture",
+      desc: "Faculty members and external resource speakers holding a seminar session in the smart classroom.",
+      src: "/assets/gallery_classroom_seminar.png",
+      fit: "cover"
+    },
+    {
+      title: "College Cricket Sports Team",
+      desc: "The official college cricket sports team assembly with the physical education director.",
+      src: "/assets/gallery_sports_cricket.png",
+      fit: "cover"
+    },
+    {
+      title: "Career Training and Placement Seminar",
+      desc: "Guest lecture on life skills, soft skills, and career orientation hosted by the Training and Placement Cell.",
+      src: "/assets/gallery_placement_drive.png",
+      fit: "cover"
+    },
+    {
+      title: "Student Certificate Award Ceremony",
+      desc: "Student achievement awardees proudly holding their certificates of merit on the campus stairs.",
+      src: "/assets/gallery_student_certificates.png",
+      fit: "cover"
+    },
+    {
       title: "Official College Emblem",
       desc: "The official seal and emblem of the Government Arts and Science College, Srivilliputhur.",
       src: "/assets/college_logo.png",
