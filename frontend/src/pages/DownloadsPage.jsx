@@ -40,6 +40,27 @@ export default function DownloadsPage() {
       format: "PDF"
     },
     {
+      title: "Bonafide Certificate Application",
+      desc: "Official application form for requesting a Bonafide Certificate from the college.",
+      fileSize: "78 KB",
+      url: "/assets/bonafide_certificate.pdf",
+      format: "PDF"
+    },
+    {
+      title: "Conduct Certificate Application",
+      desc: "Official application form for requesting a Conduct Certificate from the college.",
+      fileSize: "77 KB",
+      url: "/assets/conduct_certificate.pdf",
+      format: "PDF"
+    },
+    {
+      title: "Attendance Certificate Application",
+      desc: "Official application form for requesting an Attendance Certificate from the college.",
+      fileSize: "77 KB",
+      url: "/assets/attendance_certificate.pdf",
+      format: "PDF"
+    },
+    {
       title: "BC/MBC/DNC New Scholarship Form",
       desc: "Fresh scholarship application form for Backward Classes, Most Backward Classes, and Denotified Communities.",
       fileSize: "2.7 MB",
