@@ -36,28 +36,28 @@ export default function DownloadsPage() {
       title: "Transfer Certificate (TC) Application",
       desc: "Application form for requesting and obtaining Transfer Certificate (TC) from the college.",
       fileSize: "231 KB",
-      url: "/assets/transfer_certificate_application.pdf",
+      url: "/assets/transfer_certificate_application.pdf?v=2",
       format: "PDF"
     },
     {
       title: "Bonafide Certificate Application",
       desc: "Official application form for requesting a Bonafide Certificate from the college.",
       fileSize: "78 KB",
-      url: "/assets/bonafide_certificate.pdf",
+      url: "/assets/bonafide_certificate.pdf?v=2",
       format: "PDF"
     },
     {
       title: "Conduct Certificate Application",
       desc: "Official application form for requesting a Conduct Certificate from the college.",
       fileSize: "77 KB",
-      url: "/assets/conduct_certificate.pdf",
+      url: "/assets/conduct_certificate.pdf?v=2",
       format: "PDF"
     },
     {
       title: "Attendance Certificate Application",
       desc: "Official application form for requesting an Attendance Certificate from the college.",
       fileSize: "77 KB",
-      url: "/assets/attendance_certificate.pdf",
+      url: "/assets/attendance_certificate.pdf?v=2",
       format: "PDF"
     },
     {
@@ -109,28 +109,28 @@ export default function DownloadsPage() {
       title: "Casual Leave (CL) Form",
       desc: "Leave application form for academic and non-teaching staff seeking short-term CL.",
       fileSize: "175 KB",
-      url: "/assets/casual_leave_application.pdf",
+      url: "/assets/casual_leave_application.pdf?v=2",
       format: "PDF"
     },
     {
       title: "Earned Leave (EL) Application",
       desc: "Official application form for Earned Leave and Surrender Leave calculations.",
       fileSize: "141 KB",
-      url: "/assets/earned_leave_application.pdf",
+      url: "/assets/earned_leave_application.pdf?v=2",
       format: "PDF"
     },
     {
       title: "On-Duty (OD) Leave / Change of Duty Form",
       desc: "Application for attending university examinations, central valuation, or academic seminars.",
       fileSize: "318 KB",
-      url: "/assets/change_of_duty_application.pdf",
+      url: "/assets/change_of_duty_application.pdf?v=2",
       format: "PDF"
     },
     {
       title: "Medical Leave (ML) Application",
       desc: "Application form for requesting Medical Leave or extension of leave (excluding Casual Leave).",
       fileSize: "557 KB",
-      url: "/assets/medical_leave_application.pdf",
+      url: "/assets/medical_leave_application.pdf?v=2",
       format: "PDF"
     },
     {
