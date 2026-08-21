@@ -106,34 +106,6 @@ export default function DownloadsPage() {
 
   const staffDownloads = [
     {
-      title: "Casual Leave (CL) Form",
-      desc: "Leave application form for academic and non-teaching staff seeking short-term CL.",
-      fileSize: "175 KB",
-      url: "/assets/casual_leave_application.pdf?v=2",
-      format: "PDF"
-    },
-    {
-      title: "Earned Leave (EL) Application",
-      desc: "Official application form for Earned Leave and Surrender Leave calculations.",
-      fileSize: "141 KB",
-      url: "/assets/earned_leave_application.pdf?v=2",
-      format: "PDF"
-    },
-    {
-      title: "On-Duty (OD) Leave / Change of Duty Form",
-      desc: "Application for attending university examinations, central valuation, or academic seminars.",
-      fileSize: "318 KB",
-      url: "/assets/change_of_duty_application.pdf?v=2",
-      format: "PDF"
-    },
-    {
-      title: "Medical Leave (ML) Application",
-      desc: "Application form for requesting Medical Leave or extension of leave (excluding Casual Leave).",
-      fileSize: "557 KB",
-      url: "/assets/medical_leave_application.pdf?v=2",
-      format: "PDF"
-    },
-    {
       title: "Academic Performance Indicator (API) Form",
       desc: "Self-appraisal performance matrix for faculty career advancement scheme (CAS) promotions.",
       fileSize: "120 KB",
