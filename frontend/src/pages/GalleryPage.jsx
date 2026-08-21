@@ -9,6 +9,36 @@ export default function GalleryPage() {
 
   const galleryItems = [
     {
+      title: "Main College Infrastructure Facade",
+      desc: "The main academic block building and front facade of the Government Arts and Science College, Srivilliputhur campus.",
+      src: "/assets/gallery_college_front.png",
+      fit: "cover"
+    },
+    {
+      title: "Principal's Desk and Faculty Assembly",
+      desc: "Dr. Suba. Saravanan (Principal i/c) meeting with the faculty members and staff in the college administration office.",
+      src: "/assets/gallery_principal_staff.png",
+      fit: "cover"
+    },
+    {
+      title: "Student Field Trip and Outdoors Outing",
+      desc: "College students and staff members participating in an educational field trip and outdoor team building activity.",
+      src: "/assets/gallery_student_outing.png",
+      fit: "cover"
+    },
+    {
+      title: "Inauguration of Alumni Association Meet",
+      desc: "Inauguration ceremony of the Alumni Association at Government Arts and Science College, Srivilliputhur.",
+      src: "/assets/gallery_stage_event.png",
+      fit: "cover"
+    },
+    {
+      title: "National Integration Camp (NIC) delegation",
+      desc: "College student delegates representing the institution at the National Integration Camp.",
+      src: "/assets/gallery_integration_camp.png",
+      fit: "cover"
+    },
+    {
       title: "Official College Emblem",
       desc: "The official seal and emblem of the Government Arts and Science College, Srivilliputhur.",
       src: "/assets/college_logo.png",
@@ -18,42 +48,6 @@ export default function GalleryPage() {
       title: "Dr. Suba. Saravanan (Principal i/c)",
       desc: "College leadership - Principal in-charge of Government Arts and Science College, Srivilliputhur.",
       src: "/assets/principal_saravanan.jpg",
-      fit: "cover"
-    },
-    {
-      title: "Main Campus Block",
-      desc: "Panoramic view of the main academic and administrative building block of GASC Srivilliputhur.",
-      src: "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmK20-FwTTxdKDWqVfFB6GxzXyDUO32FCAUmTgYpGLainPW7DHGGBPmyf_XDtaOMSYQnTplR6O-h_uqxKCnnb2U4UHnroaRqVC_mnkkWyIrlWp4yRizJDHGhCMp2b4mZeOqi3bc7A=w1000",
-      fit: "cover"
-    },
-    {
-      title: "Inauguration of Academic Seminar",
-      desc: "Distinguished faculty and guests conducting academic development workshops and guest lectures.",
-      src: "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnkI5whYy2A2Utsw2NH21E89KZfK4XVcGIcICpILXr6g3YaIfRI4pOSY3HMttRxd_EFXG-T4htJ9Ue439DJkhHK7A-r0JokOwa8HeXfBXgOvRztxIV0oSBD0AKPN69U0VsIvPVv84QgE0ZP=w1000",
-      fit: "cover"
-    },
-    {
-      title: "Student Interactive Session",
-      desc: "Group of college students participating in collaborative academic review and team activities on campus.",
-      src: "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkN-sL2WG29_FeYqlRbNgO1hNAfIGY851CKfdESt5FPG6gcAtbzEvkYr6TWQEBitTayRDlJCUqxgl6udLO-UShAaGHwmhagIhNMVxF3ezg-45Tj6NmusNSMdjy9L58VHMfXaQ5sQH2vOpWM=w1000",
-      fit: "cover"
-    },
-    {
-      title: "National Day Celebration & Parades",
-      desc: "NSS volunteers and college cadets celebrating national events on the central campus grounds.",
-      src: "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlmOqUnaHmDD6sG8c17SpRy6A3UYuLdA8asDDrUEce-ozXvPFhjYvhA4U34-WVmNgTIs5W_9owktn406uDQXUAuiadI0kbeSzjLumLBP9EvZS-b5_TTPZm4VskcV0wCPAsG9dEcTg=w1000",
-      fit: "cover"
-    },
-    {
-      title: "Annual College Day Celebrations",
-      desc: "Dignitaries and leadership inaugurating cultural events and distribution of academic accolades.",
-      src: "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk_rOgR6FTWxwiEDoeynsckTzWy7T7y6JztCllqOFdBolmN0pucjBzLgtajILFkciEzyuJk0qR2nWr9lm3ZOBaqDbGFqMV23ithneWlUe5gdd_wT1nSnk5gtMCM182aZymKKeDTLxDIe9U=w1000",
-      fit: "cover"
-    },
-    {
-      title: "Freshers Orientation Ceremony",
-      desc: "Guidance helpdesk and induction seminars conducted for the newly enrolled batch of college students.",
-      src: "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnf7_wNeRH6cEZYhkH45K9MWBOaLq5IvTA_C9xlMdFjwHY45pMeardEsHZRmjY2hhJdnQ79bO8SwxmSD-UUF23GiCJEcw36-rMiIWvs3Ul2l8MrpXZEskcAKCgxOZOVIi8qtDR7ow=w1000",
       fit: "cover"
     }
   ];

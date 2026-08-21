@@ -26,20 +26,6 @@ export default function DownloadsPage() {
 
   const studentDownloads = [
     {
-      title: "Official College Emblem (Logo)",
-      desc: "High-resolution official seal and emblem of Government Arts and Science College, Srivilliputhur.",
-      fileSize: "244 KB",
-      url: "/assets/college_logo.png",
-      format: "PNG"
-    },
-    {
-      title: "Students Information - Annexure I",
-      desc: "Student database entry sheet and travel route information form.",
-      fileSize: "356 KB",
-      url: "/assets/annexure_1_student_info.pdf",
-      format: "PDF"
-    },
-    {
       title: "Transfer Certificate (TC) Application",
       desc: "Application form for requesting and obtaining Transfer Certificate (TC) from the college.",
       fileSize: "231 KB",
@@ -65,48 +51,6 @@ export default function DownloadsPage() {
       desc: "Official application form for requesting an Attendance Certificate from the college.",
       fileSize: "77 KB",
       url: "/assets/attendance_certificate.pdf?v=2",
-      format: "PDF"
-    },
-    {
-      title: "BC/MBC/DNC New Scholarship Form",
-      desc: "Fresh scholarship application form for Backward Classes, Most Backward Classes, and Denotified Communities.",
-      fileSize: "2.7 MB",
-      url: "/assets/bc_mbc_new_scholarship_form.pdf",
-      format: "PDF"
-    },
-    {
-      title: "BC/MBC/DNC Scholarship Renewal Form",
-      desc: "Scholarship renewal application form for Backward Classes, Most Backward Classes, and Denotified Communities.",
-      fileSize: "1.9 MB",
-      url: "/assets/bc_mbc_scholarship_renewal_form.pdf",
-      format: "PDF"
-    },
-    {
-      title: "SC/ST Post Matric Scholarship Renewal Form",
-      desc: "Post Matric scholarship renewal application form for Adi Dravidar and Tribal Welfare department.",
-      fileSize: "7.6 MB",
-      url: "/assets/sc_st_scholarship_renewal_form.pdf",
-      format: "PDF"
-    },
-    {
-      title: "MKU Private Exam Application Form",
-      desc: "Application form and instruction sheets for UG Private candidates appearing for November 2023 semester examinations.",
-      fileSize: "318 KB",
-      url: "/assets/mku_private_exam_application.pdf",
-      format: "PDF"
-    },
-    {
-      title: "MKU Special Convocation Form",
-      desc: "Special convocation application form w.e.f 01.11.2022 for applying for degree certificates.",
-      fileSize: "358 KB",
-      url: "/assets/mku_special_convocation_application.pdf",
-      format: "PDF"
-    },
-    {
-      title: "MKU Revaluation Application Form",
-      desc: "Revaluation application form and guidelines for UG/PG semester examinations.",
-      fileSize: "184 KB",
-      url: "/assets/mku_revaluation_application.pdf",
       format: "PDF"
     }
   ];
