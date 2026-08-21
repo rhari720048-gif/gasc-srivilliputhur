@@ -2,55 +2,25 @@ import React, { useState, useEffect } from 'react';
 import TopBar from '../components/TopBar';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { Image, ZoomIn, X, ChevronLeft, ChevronRight, Filter } from 'lucide-react';
+import { ZoomIn, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function GalleryPage() {
-  const [activeFilter, setActiveFilter] = useState('all');
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
   const galleryItems = [
     {
-      title: "College Campus Main Building",
-      category: "infrastructure",
-      desc: "The majestic front facade of the Government Arts and Science College Srivilliputhur campus.",
-      src: "/assets/college_building_hd.png"
+      title: "Official College Emblem",
+      desc: "The official seal and emblem of the Government Arts and Science College, Srivilliputhur.",
+      src: "/assets/college_logo.png",
+      fit: "contain"
     },
     {
-      title: "Advanced Computer Science Laboratory",
-      category: "facilities",
-      desc: "State-of-the-art computing laboratory equipped with high-speed internet and modern desktops for practical learning.",
-      src: "/assets/computer_lab.png"
-    },
-    {
-      title: "Student Seminar & Interactive Learning Center",
-      category: "facilities",
-      desc: "Interactive teaching space designed for digital learning, workshops, and student presentations.",
-      src: "/assets/teaching_learning.png"
-    },
-    {
-      title: "Lush Green College Campus Grounds",
-      category: "campus",
-      desc: "Scenic walkways and green landscapes surrounding the academic blocks, promoting a peaceful study environment.",
-      src: "/assets/hero_campus.png"
-    },
-    {
-      title: "Academic Block Corridor Entrance",
-      category: "infrastructure",
-      desc: "The entrance gateway leading into the primary lecture halls and department classrooms.",
-      src: "/assets/college_building.png"
+      title: "Dr. Suba. Saravanan (Principal i/c)",
+      desc: "College leadership - Principal in-charge of Government Arts and Science College, Srivilliputhur.",
+      src: "/assets/principal_saravanan.jpg",
+      fit: "cover"
     }
   ];
-
-  const categories = [
-    { id: 'all', label: 'All Photos' },
-    { id: 'infrastructure', label: 'Infrastructure' },
-    { id: 'facilities', label: 'Facilities' },
-    { id: 'campus', label: 'Campus Life' }
-  ];
-
-  const filteredItems = activeFilter === 'all' 
-    ? galleryItems 
-    : galleryItems.filter(item => item.category === activeFilter);
 
   // Keyboard navigation for Lightbox
   useEffect(() => {
@@ -66,11 +36,11 @@ export default function GalleryPage() {
   }, [lightboxIndex]);
 
   const handlePrev = () => {
-    setLightboxIndex(prev => (prev === 0 ? filteredItems.length - 1 : prev - 1));
+    setLightboxIndex(prev => (prev === 0 ? galleryItems.length - 1 : prev - 1));
   };
 
   const handleNext = () => {
-    setLightboxIndex(prev => (prev === filteredItems.length - 1 ? 0 : prev + 1));
+    setLightboxIndex(prev => (prev === galleryItems.length - 1 ? 0 : prev + 1));
   };
 
   return (
@@ -96,7 +66,7 @@ export default function GalleryPage() {
             Photo Gallery
           </h1>
           <p style={{ color: '#CBD5E1', maxWidth: '650px', margin: '0.5rem auto 0 auto', fontSize: '0.95rem', lineHeight: 1.5 }}>
-            Take a visual tour of our campus, facilities, laboratories, and vibrant student life.
+            Official institutional gallery of Government Arts and Science College, Srivilliputhur.
           </p>
         </div>
       </div>
@@ -104,53 +74,16 @@ export default function GalleryPage() {
       {/* Gallery Section */}
       <section className="section-padding" style={{ backgroundColor: '#F8FAFC' }}>
         <div className="container">
-          
-          {/* Category Filter Tabs */}
-          <div 
-            style={{ 
-              display: 'flex', 
-              justifyContent: 'center', 
-              alignItems: 'center', 
-              flexWrap: 'wrap', 
-              gap: '0.75rem',
-              marginBottom: '2.5rem' 
-            }}
-          >
-            <span style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', color: 'var(--text-muted)', fontSize: '0.85rem', fontWeight: 600, marginRight: '0.5rem' }}>
-              <Filter size={16} /> Filter by:
-            </span>
-            {categories.map(cat => (
-              <button
-                key={cat.id}
-                onClick={() => {
-                  setActiveFilter(cat.id);
-                  setLightboxIndex(null);
-                }}
-                style={{
-                  padding: '0.5rem 1.25rem',
-                  borderRadius: '30px',
-                  border: '1px solid',
-                  borderColor: activeFilter === cat.id ? 'var(--primary-navy)' : 'var(--border-light)',
-                  backgroundColor: activeFilter === cat.id ? 'var(--primary-navy)' : '#FFFFFF',
-                  color: activeFilter === cat.id ? '#FFFFFF' : 'var(--text-dark)',
-                  fontWeight: 600,
-                  fontSize: '0.85rem',
-                  cursor: 'pointer',
-                  boxShadow: activeFilter === cat.id ? 'var(--shadow-sm)' : 'none',
-                  transition: 'all 0.2s ease'
-                }}
-              >
-                {cat.label}
-              </button>
-            ))}
-          </div>
 
           {/* Photo Grid */}
           <style>{`
             .gallery-grid {
               display: grid;
-              grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-              gap: 2rem;
+              grid-template-columns: repeat(auto-fit, minmax(320px, 450px));
+              gap: 2.5rem;
+              justify-content: center;
+              max-width: 1000px;
+              margin: 0 auto;
             }
             .gallery-item-card {
               background: #FFFFFF;
@@ -168,20 +101,42 @@ export default function GalleryPage() {
               box-shadow: var(--shadow-lg);
               border-color: var(--secondary-gold);
             }
+            .gallery-header-block {
+              padding: 1.25rem 1.5rem;
+              background-color: var(--bg-light);
+              border-bottom: 1px solid var(--border-light);
+            }
+            .gallery-item-title {
+              font-size: 1.15rem;
+              font-weight: 700;
+              color: var(--primary-navy-dark);
+              margin: 0;
+            }
             .gallery-img-container {
               position: relative;
               width: 100%;
-              height: 240px;
+              height: 380px;
               overflow: hidden;
+              background-color: #FFFFFF;
+              display: flex;
+              align-items: center;
+              justify-content: center;
             }
-            .gallery-img-container img {
+            .gallery-img-container.fit-contain img {
+              width: 80%;
+              height: 80%;
+              object-fit: contain;
+            }
+            .gallery-img-container.fit-cover img {
               width: 100%;
               height: 100%;
               object-fit: cover;
+            }
+            .gallery-img-container img {
               transition: transform 0.5s ease;
             }
             .gallery-item-card:hover .gallery-img-container img {
-              transform: scale(1.08);
+              transform: scale(1.06);
             }
             .gallery-img-overlay {
               position: absolute;
@@ -200,8 +155,8 @@ export default function GalleryPage() {
               opacity: 1;
             }
             .gallery-zoom-badge {
-              width: 46px;
-              height: 46px;
+              width: 48px;
+              height: 48px;
               border-radius: 50%;
               background: rgba(255, 255, 255, 0.9);
               color: var(--primary-navy);
@@ -216,29 +171,15 @@ export default function GalleryPage() {
               transform: scale(1);
             }
             .gallery-info-block {
-              padding: 1.25rem;
-              display: flex;
-              flex-direction: column;
+              padding: 1.25rem 1.5rem;
+              border-top: 1px solid var(--border-light);
               flex-grow: 1;
-            }
-            .gallery-cat-tag {
-              font-size: 0.7rem;
-              font-weight: 700;
-              text-transform: uppercase;
-              color: var(--secondary-gold);
-              letter-spacing: 0.05em;
-              margin-bottom: 0.35rem;
-            }
-            .gallery-item-title {
-              font-size: 1.05rem;
-              font-weight: 700;
-              color: var(--primary-navy);
-              margin: 0 0 0.5rem 0;
+              background-color: #FFFFFF;
             }
             .gallery-item-desc {
-              font-size: 0.825rem;
+              font-size: 0.875rem;
               color: var(--text-muted);
-              line-height: 1.45;
+              line-height: 1.5;
               margin: 0;
             }
             /* Lightbox Overlay Styles */
@@ -297,7 +238,7 @@ export default function GalleryPage() {
               display: flex;
               flex-direction: column;
               align-items: center;
-              gap: 1rem;
+              gap: 1.25rem;
             }
             .lightbox-main-img {
               max-width: 100%;
@@ -305,6 +246,8 @@ export default function GalleryPage() {
               object-fit: contain;
               border-radius: var(--radius-md);
               box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+              background-color: #FFFFFF;
+              padding: 10px;
             }
             .lightbox-caption {
               text-align: center;
@@ -313,36 +256,42 @@ export default function GalleryPage() {
             }
             .lightbox-title {
               margin: 0;
-              font-size: 1.25rem;
+              font-size: 1.35rem;
               color: var(--secondary-gold);
             }
             .lightbox-desc {
               margin: 0.35rem 0 0 0;
-              font-size: 0.875rem;
+              font-size: 0.9rem;
               color: #CBD5E1;
-              line-height: 1.4;
+              line-height: 1.45;
             }
           `}</style>
 
           <div className="gallery-grid">
-            {filteredItems.map((item, idx) => (
+            {galleryItems.map((item, idx) => (
               <div 
                 key={idx} 
                 className="gallery-item-card"
                 onClick={() => setLightboxIndex(idx)}
               >
-                <div className="gallery-img-container">
+                {/* Title ABOVE the Image */}
+                <div className="gallery-header-block">
+                  <h3 className="gallery-item-title">{item.title}</h3>
+                </div>
+
+                {/* Image Container */}
+                <div className={`gallery-img-container fit-${item.fit}`}>
                   <img src={item.src} alt={item.title} />
                   <div className="gallery-img-overlay">
                     <div className="gallery-zoom-badge">
-                      <ZoomIn size={22} />
+                      <ZoomIn size={24} />
                     </div>
                   </div>
                 </div>
+
+                {/* Description BELOW the Image */}
                 <div className="gallery-info-block">
-                  <span className="gallery-cat-tag">{item.category}</span>
-                  <h3 className="gallery-item-title">{item.title}</h3>
-                  <p className="gallery-img-desc gallery-item-desc">{item.desc}</p>
+                  <p className="gallery-item-desc">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -367,15 +316,16 @@ export default function GalleryPage() {
           {/* Main Content Area */}
           <div className="lightbox-img-wrapper">
             <img 
-              src={filteredItems[lightboxIndex].src} 
-              alt={filteredItems[lightboxIndex].title} 
+              src={galleryItems[lightboxIndex].src} 
+              alt={galleryItems[lightboxIndex].title} 
               className="lightbox-main-img" 
+              style={galleryItems[lightboxIndex].fit === 'contain' ? { padding: '20px' } : {}}
             />
             <div className="lightbox-caption">
-              <h4 className="heading-serif lightbox-title">{filteredItems[lightboxIndex].title}</h4>
-              <p className="lightbox-desc">{filteredItems[lightboxIndex].desc}</p>
+              <h4 className="heading-serif lightbox-title">{galleryItems[lightboxIndex].title}</h4>
+              <p className="lightbox-desc">{galleryItems[lightboxIndex].desc}</p>
               <div style={{ color: 'var(--secondary-gold)', fontSize: '0.75rem', fontWeight: 600, marginTop: '0.5rem' }}>
-                Photo {lightboxIndex + 1} of {filteredItems.length}
+                Photo {lightboxIndex + 1} of {galleryItems.length}
               </div>
             </div>
           </div>
