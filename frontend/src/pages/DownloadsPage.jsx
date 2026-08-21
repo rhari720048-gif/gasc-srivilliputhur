@@ -26,6 +26,13 @@ export default function DownloadsPage() {
 
   const studentDownloads = [
     {
+      title: "Official College Emblem (Logo)",
+      desc: "High-resolution official seal and emblem of Government Arts and Science College, Srivilliputhur.",
+      fileSize: "244 KB",
+      url: "/assets/college_logo.png",
+      format: "PNG"
+    },
+    {
       title: "Students Information - Annexure I",
       desc: "Student database entry sheet and travel route information form.",
       fileSize: "356 KB",
