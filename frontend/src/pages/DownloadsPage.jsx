@@ -108,25 +108,29 @@ export default function DownloadsPage() {
     {
       title: "Casual Leave (CL) Form",
       desc: "Leave application form for academic and non-teaching staff seeking short-term CL.",
-      fileSize: "45 KB",
-      url: "#",
-      placeholder: true,
+      fileSize: "175 KB",
+      url: "/assets/casual_leave_application.pdf",
       format: "PDF"
     },
     {
       title: "Earned Leave (EL) Application",
       desc: "Official application form for Earned Leave and Surrender Leave calculations.",
-      fileSize: "50 KB",
-      url: "#",
-      placeholder: true,
+      fileSize: "141 KB",
+      url: "/assets/earned_leave_application.pdf",
       format: "PDF"
     },
     {
-      title: "On-Duty (OD) Leave Request Form",
+      title: "On-Duty (OD) Leave / Change of Duty Form",
       desc: "Application for attending university examinations, central valuation, or academic seminars.",
-      fileSize: "48 KB",
-      url: "#",
-      placeholder: true,
+      fileSize: "318 KB",
+      url: "/assets/change_of_duty_application.pdf",
+      format: "PDF"
+    },
+    {
+      title: "Medical Leave (ML) Application",
+      desc: "Application form for requesting Medical Leave or extension of leave (excluding Casual Leave).",
+      fileSize: "557 KB",
+      url: "/assets/medical_leave_application.pdf",
       format: "PDF"
     },
     {
@@ -329,9 +333,18 @@ export default function DownloadsPage() {
                   <h2 className="heading-serif" style={{ color: 'var(--primary-navy-dark)', fontSize: '1.6rem', marginTop: '0.25rem', marginBottom: '0.5rem' }}>
                     Downloads for Students
                   </h2>
-                  <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.5 }}>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', lineHeight: 1.5, marginBottom: '1.5rem' }}>
                     Access official syllabi, G.O. guidelines, academic calendars, and other essential forms.
                   </p>
+
+                  {/* Banner Image */}
+                  <div style={{ marginBottom: '2rem', borderRadius: '12px', overflow: 'hidden', boxShadow: 'var(--shadow-md)' }}>
+                    <img 
+                      src="/assets/teaching_learning.png" 
+                      alt="A Culture of Learning, A Community of Innovation" 
+                      style={{ width: '100%', height: 'auto', display: 'block' }}
+                    />
+                  </div>
 
                   <div className="downloads-items-grid">
                     {studentDownloads.map((item, idx) => (
