@@ -6,6 +6,7 @@ import DepartmentsPage from './pages/DepartmentsPage';
 import AcademicPage from './pages/AcademicPage';
 import AdmissionPage from './pages/AdmissionPage';
 import DownloadsPage from './pages/DownloadsPage';
+import GalleryPage from './pages/GalleryPage';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/academic" element={<AcademicPage />} />
         <Route path="/admission" element={<AdmissionPage />} />
         <Route path="/downloads" element={<DownloadsPage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
         <Route path="*" element={<HomePage />} />
       </Routes>
     </Router>
